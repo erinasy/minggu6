@@ -18,7 +18,7 @@ class CreateStudents extends Migration
             $table->String('nim',10);
             $table->String('name',30);
             $table->String('class',10);
-            $table->String('departement',30);
+            $table->String('department',30);
             $table->String('phone_number',13);
             $table->timestamps();
         });
