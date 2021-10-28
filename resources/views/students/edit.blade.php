@@ -26,12 +26,17 @@ required="required" name="nim" value="{{$student->nim}}"></br>
  <label for="name">Name</label>
  <input type="text" class="form-control" 
 required="required" name="name" value="{{$student->name}}"></br>
- </div>
- <div class="form-group">
- <label for="class">Class</label>
- <input type="text" class="form-control" 
-required="required" name="class" value="{{$student->class}}"></br>
- </div>
+<div class="form-group">
+<label for="Kelas">Class</label>
+<select class="form-control" name="Kelas">
+@foreach($kelas as $class)
+ <option value="{{$class->id}}" {{ $student->class_id == $class->id ? "selected":"" }}> 
+ {{ $class->class_name}}
+</option>
+@endforeach
+</select></br>
+</div>
+
  <div class="form-group">
  <label for="department">Department</label>
  <input type="text" class="form-control" 

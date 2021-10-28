@@ -15,11 +15,11 @@
             <form class="form" method="get" action="{{ route('search') }}">
                         <div class="form-group w-100 mb-3">
                             <label for="search" class="d-block mr-2">Pencarian</label>
-                            <input type="text" name="search" class="form-control w-75 d-inline" id="search" placeholder="Masukkan nama">
+                            <input type="text" name="search" class="form-control w-75 d-inline" id="search"
+                             placeholder="Masukkan nama">
                             <button type="submit" class="btn btn-primary mb-1">Cari</button>
                         </div>
                     </form>
-                    <!-- Start kode untuk form pencarian -->
                     @if ($message = Session::get('success'))
                     <div class="alert alert-success">
                         <p>{{ $message }}</p>
@@ -42,7 +42,7 @@
                      <tr>
                          <td>{{ $s->nim }}</td>
                          <td>{{ $s->name }}</td>
-                         <td>{{ $s->class }}</td>
+                         <td>{{ $s->kelas->class_name }}</td>
                          <td>{{ $s->department}}</td>
                          <td>
                             <form action="/students/{{$s->id}}" method="post">
