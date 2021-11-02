@@ -10,7 +10,8 @@
                 <div class="card-body">
                     <b>Name</b>     : {{ $student->name }} <br>
                     <b>NIM</b>      : {{ $student->nim }} <br>
-                    <b>Class</b>    : {{ $student->kelas->class_name }} <br><br>
+                    <b>Class</b>    : {{ $student->kelas->class_name }} <br>
+                    <b>Department</b> : {{ $student->department }} <br><br>
                     <table class="table table-responsive table-striped">
                         <thead>
                             <tr>
