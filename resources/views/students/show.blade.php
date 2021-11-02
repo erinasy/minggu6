@@ -13,7 +13,7 @@
                             {{ session('status') }}
                         </div>
                     @endif
-
+                    <img width="150px" src="{{asset('storage/'.$student->photo)}}">
                     <table class="table table-responsive">
                         <tr>
                             <tr><th>NIM</th><th>:</th><td>{{ $student->nim }}</td></tr>
